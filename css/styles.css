@@ -1,3 +1,5 @@
+/**********************TAG SELECTORS*************************/
+
 body {
     background-color: #EAF6F6;
 }
@@ -18,6 +20,7 @@ img {
     height: 150px;
 }
 
+
 h1 {
     color: #66bfbf;
     text-align: center;
@@ -25,4 +28,36 @@ h1 {
 
 h3 {
     color: #66bfbf;
+}
+
+
+/**********************CLASS SELECTORS*************************/
+
+.circular {
+    border-radius: 100%;
+}
+
+
+/**********************ID SELECTORS*************************/
+
+#profile:hover {
+    opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
 }
