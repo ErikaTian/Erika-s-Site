@@ -1,7 +1,75 @@
-/**********************TAG SELECTORS*************************/
+/**********************INDEX.HTML STYLING*************************/
+		/* Colors:
+			body: d8d8d8
+			container: e4f9f5
+			side-bar: B5F1CC
+			side-bar a: FEFF86
+		*/
 
 body {
-    background-color: #EAF6F6;
+    background-color: #d8d8d8;
+		font-family: 'Libre Baskerville', serif;
+}
+
+.side-bar {
+  height: 100%;
+  width: 170px;
+  position:fixed;
+	border-radius: 0px 20px 50px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+  z-index: 1;
+  top: 0;
+  left: 0;
+	background-color: #B5F1CC;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.side-bar a {
+	display: block;
+  padding: 6px 8px 6px 16px;
+	background-color: #FEFF86;
+	border-radius: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+@media (max-height: 576px) {
+	/* .side-bar {padding-top: 15px;} */
+	.side-bar a {font-size: 18px;}
+}
+
+/* Delete this outer-most class
+  .main { */
+	/* height: 100vh; */
+  /* margin-left: 160px; Same as the width of the sidenav */
+	/* margin-top: 60px; */
+  /* font-size: 28px; Increased text to enable scrolling */
+	/* padding: 0 10px; */
+	/* display: flex;
+	flex-direction: column;
+	justify-content: space-around; */
+/* } */
+
+.container {
+	background-color: #e4f9f5;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 0;
+	margin-left: 170px;
+	margin-right: 0px;
+	font-size: 22px;
+}
+
+.pro {
+	text-decoration: underline;
 }
 
 hr {
@@ -15,30 +83,35 @@ hr {
     width: 5%;
 }
 
-img {
-    width: 150px;
-    height: 150px;
-}
-
-
 h1 {
     color: #66bfbf;
-    text-align: center;
+		margin: 0;
+		padding: 0;
+
 }
 
-h3 {
+h2 {
     color: #66bfbf;
 }
 
+footer {
+	text-align: center;
+	margin-top: 20px;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 150%;
+	font-size: 20px;
+}
+/**********************RESUME.HTML STYLING*************************/
 
-/**********************CLASS SELECTORS*************************/
+img {
+	width: 150px;
+	height: 150px;
+}
 
 .circular {
     border-radius: 100%;
 }
-
-
-/**********************ID SELECTORS*************************/
 
 #profile:hover {
     opacity: 1;
