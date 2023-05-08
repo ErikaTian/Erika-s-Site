@@ -1,18 +1,19 @@
 /**********************INDEX.HTML STYLING*************************/
-		/* Colors:
-			body: d8d8d8
-			container: e4f9f5
-			side-bar: B5F1CC
-			side-bar a: FEFF86
-		*/
+/* Color selection:
+	body: d8d8d8
+	container: e4f9f5
+	side-bar: B5F1CC
+	side-bar a: FEFF86 F5FFC9
+*/
 
 body {
-    background-color: #d8d8d8;
-		font-family: 'Libre Baskerville', serif;
+	background-color: #d8d8d8;
+	color: #818181;
+	font-family: 'Libre Baskerville', serif;
 }
 
 .side-bar {
-  height: 100%;
+  height: 100vh;
   width: 170px;
   position:fixed;
 	border-radius: 0px 20px 50px 0px;
@@ -30,19 +31,19 @@ body {
 .side-bar a {
 	display: block;
   padding: 6px 8px 6px 16px;
-	background-color: #FEFF86;
+	background-color: #F5FFC9;
 	border-radius: 20px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
+.side-bar a:hover {
+  color: darkblue;
 }
 
-@media (max-height: 576px) {
-	/* .side-bar {padding-top: 15px;} */
+@media screen and (max-height: 576px) {
+	.side-bar {padding-top: 15px;}
 	.side-bar a {font-size: 18px;}
 }
 
@@ -68,41 +69,57 @@ body {
 	font-size: 22px;
 }
 
-.pro {
-	text-decoration: underline;
+#about {
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+	grid-template-rows: 0.05fr 0.05 0.2fr;
 }
 
-hr {
-    /* border-style: dotted none none; */
-    border-style: none;
-    border-top-style: dotted;
-    /* background-color: #d8d8d8; It has no height now. */ 
-    border-color: grey;
-    border-width: 5px;
-    height: 0px;
-    width: 5%;
+#about > img {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	margin-left: 150px;
+}
+
+#about > h1 {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	text-align: center;
+}
+
+#about > p#BCS {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	text-align: center;
+}
+
+#about > p#description {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 4;
 }
 
 h1 {
-    color: #66bfbf;
-		margin: 0;
-		padding: 0;
+	color: #66bfbf;
+	margin: 0;
+	padding: 0;
 
 }
 
 h2 {
-    color: #66bfbf;
+	color: #66bfbf;
 }
 
-footer {
-	text-align: center;
-	margin-top: 20px;
-	padding: 0;
-	box-sizing: border-box;
-	line-height: 150%;
-	font-size: 20px;
+.pro {
+	text-decoration: underline;
 }
-/**********************RESUME.HTML STYLING*************************/
 
 img {
 	width: 150px;
@@ -110,11 +127,11 @@ img {
 }
 
 .circular {
-    border-radius: 100%;
+	border-radius: 100%;
 }
 
 #profile:hover {
-    opacity: 1;
+	opacity: 1;
 	-webkit-animation: flash 1.5s;
 	animation: flash 1.5s;
 }
@@ -133,4 +150,24 @@ img {
 	100% {
 		opacity: 1;
 	}
+}
+
+hr {
+	/* border-style: dotted none none; */
+	border-style: none;
+	border-top-style: dotted;
+	/* background-color: #d8d8d8; It has no height now. */ 
+	border-color: grey;
+	border-width: 5px;
+	height: 0px;
+	width: 5%;
+}
+
+footer {
+	text-align: center;
+	margin-top: 20px;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 150%;
+	font-size: 20px;
 }
